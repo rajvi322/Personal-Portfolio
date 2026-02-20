@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary background colors */
+  --color-cream: #FDFBF7;
+  --color-blush: #F4E3DD;
+  --color-blush-dark: #C89A8C;
+  --color-blush-dark-hover: #8E5C50;
+
+  /* Accent colors */
+  --color-caramel: #C5A083;
+  --color-caramel-hover: #B08D72;
+
+  /* Text colors */
+  --color-brown: #5E4B41;
+  --color-brown-dark: #4A3B32;
+
+  /* Additional layout colors */
+  --color-soft-gray: #F5F5F5;
+  --color-light-yellow: #F7F2EC;
+  --color-yellow: #E6C47A;
+}

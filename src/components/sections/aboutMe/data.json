@@ -1,0 +1,12 @@
+{
+    "title": "About Me",
+    "paragraphs": [
+        "I’m a passionate full stack web developer who enjoys building meaningful digital experiences. My journey into technology began with curiosity and has evolved into a strong foundation in modern web technologies and system design.",
+        "I believe great products are created at the intersection of logic and creativity. With a background in Computer Engineering and a strong artistic inclination, I focus on crafting solutions that are both functional and visually refined.",
+        "I continuously explore new technologies, refine my skills, and prioritize writing clean, scalable code. From intuitive user interfaces to robust backend systems, I approach each project with precision and purpose.",
+        "Beyond development, art and visual creativity influence how I think about design and user experience — blending structure with expression to create thoughtful digital products."
+    ],
+    "resumeButtonText": "Download Resume",
+    "resumeLink": "/resume.pdf",
+    "image": "/working_person.avif"
+}

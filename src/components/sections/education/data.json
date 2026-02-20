@@ -1,0 +1,20 @@
+{
+    "title": "Education",
+    "description": "Here is a summary of my educational background",
+    "education": [
+        {
+            "title": "Bachelors",
+            "course": "B.E. - Computer Engineering",
+            "college": "Sarvajanik College of Engineering and Technology (SCET) - Gujarat, India",
+            "duration": "2019 - 2023",
+            "highlights": [
+                "Data Structures & Algorithms",
+                "AI & Machine Learning",
+                "Operating Systems",
+                "Cloud Computing",
+                "Software Engineering"
+            ],
+            "cgpa": "8.84"
+        }
+    ]
+}

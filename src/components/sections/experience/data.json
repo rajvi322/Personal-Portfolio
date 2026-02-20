@@ -1,0 +1,28 @@
+{
+    "title": "Experience",
+    "description": "Here is a summary of my professional experience and the skills I have developed.",
+    "experiences": [
+        {
+            "title": "Software Developer",
+            "company": "Daydreamsoft LLP",
+            "duration": "Oct 2023 - Present",
+            "description": "Working on building scalable web applications using modern technologies.",
+            "responsibilities": [
+                "Designed and developed scalable web applications using modern frontend and backend technologies, ensuring optimal performance and maintainability.",
+                "Collaborated closely with cross-functional teams including designers and backend engineers to implement new features and enhance existing functionality.",
+                "Optimized application performance by refactoring components, improving API integrations, and ensuring responsive behavior across multiple devices and screen sizes."
+            ]
+        },
+        {
+            "title": "React Intern",
+            "company": "Sarvadhi Solutions",
+            "duration": "Jan 2023 - Mar 2023",
+            "description": "Working on building scalable web applications using modern technologies.",
+            "responsibilities": [
+                "Assisted in developing and maintaining dynamic React-based user interfaces with a focus on clean component architecture and reusability.",
+                "Implemented new features and resolved UI bugs by collaborating with senior developers and participating in regular code reviews.",
+                "Improved user experience by optimizing rendering performance and ensuring cross-browser compatibility."
+            ]
+        }
+    ]
+}

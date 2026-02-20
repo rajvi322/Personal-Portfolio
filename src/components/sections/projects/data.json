@@ -1,0 +1,43 @@
+{
+    "title": "Projects",
+    "description": "A collection of applications I designed and developed to strengthen my problem-solving skills and explore modern web technologies.",
+    "projects": [
+        {
+            "title": "Chat Application",
+            "description": "A scalable real-time chat platform that enables users to communicate instantly through secure and responsive messaging. The application supports user authentication, real-time message broadcasting, and optimized backend event handling. Special focus was placed on performance, clean UI architecture, and maintaining a seamless user experience across devices.",
+            "details": [
+                "Implemented WebSocket-based real-time communication.",
+                "Integrated secure JWT authentication.",
+                "Designed responsive and minimal chat interface."
+            ],
+            "techStack": [
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Socket.io",
+                "JWT"
+            ],
+            "image": "project1.png",
+            "link": "https://github.com/yourusername/chat-application"
+        },
+        {
+            "title": "Productivity App",
+            "description": "A task and productivity management application built to help users organize workflows efficiently. It includes dynamic task creation, filtering, and state-based updates with an intuitive layout. The goal was to focus on structured state handling, scalable architecture, and building a polished, user-friendly interface.",
+            "details": [
+                "Developed full CRUD task management system.",
+                "Implemented global state handling.",
+                "Optimized UI for clarity and responsiveness."
+            ],
+            "techStack": [
+                "React",
+                "Redux",
+                "Node.js",
+                "Express",
+                "MongoDB"
+            ],
+            "image": "project2.png",
+            "link": "https://github.com/yourusername/productivity-app"
+        }
+    ]
+}
