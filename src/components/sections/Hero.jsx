@@ -33,7 +33,7 @@ export const Hero = () => {
                     {/* Right Image */}
                     <div className="mt-12 md:mt-0 z-10">
                         <img
-                            src="/temp1.jpg"
+                            src="/hero_img.png"
                             alt="Hero"
                             className="w-72 md:w-[420px] drop-shadow-xl"
                         />

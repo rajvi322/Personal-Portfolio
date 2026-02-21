@@ -1,5 +1,6 @@
 import { ChevronDown, ChevronsRight, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./Button";
 
 export const ExperienceCard = ({ data, align = "left" }) => {
@@ -27,17 +28,42 @@ export const ExperienceCard = ({ data, align = "left" }) => {
                 {data.description}
             </p>
 
-            {isOpen && (
-                <ul className={`space-y-2 text-sm text-justify text-brown max-w-[400px] mb-4 ${align === "right" ? "ml-auto" : "mr-auto"}`}>
-                    {data.responsibilities.map((item, i) => (
-                        <li key={i} className="flex items-center gap-2"><ChevronsRight color="#C5A083" size={16} className="min-w-[25px]" /> {item}</li>
-                    ))}
-                </ul>
-            )}
+            {/* Animated List */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.4, ease: "easeInOut" }}
+                        className={`overflow-hidden space-y-2 text-sm text-justify text-brown max-w-[400px] mb-4 ${align === "right" ? "ml-auto" : "mr-auto"
+                            }`}
+                    >
+                        {data.responsibilities.map((item, i) => (
+                            <motion.li
+                                key={i}
+                                initial={{ y: 10, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                exit={{ y: 10, opacity: 0 }}
+                                transition={{ delay: i * 0.05 }}
+                                className="flex items-center gap-2"
+                            >
+                                <ChevronsRight
+                                    color="#C5A083"
+                                    size={16}
+                                    className="min-w-[20px]"
+                                />
+                                {item}
+                            </motion.li>
+                        ))}
+                    </motion.ul>
+                )}
+            </AnimatePresence>
 
             <Button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`text-sm text-caramel font-medium flex items-center gap-1 hover:opacity-80 transition ${align === "right" ? "ml-auto" : "mr-auto"}`}
+                className={`text-sm !px-0 text-caramel font-medium flex items-center gap-1 hover:opacity-80 transition ${align === "right" ? "ml-auto" : "mr-auto"
+                    }`}
                 varient="transparent"
             >
                 {isOpen ? (

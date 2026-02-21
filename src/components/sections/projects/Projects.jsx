@@ -11,7 +11,7 @@ const CheckIcon = () => (
 
 export const Projects = () => {
     return (
-        <section className="bg-light-yellow pt-20 pb-32 overflow-hidden">
+        <section className="flex-1 bg-light-yellow pt-20 pb-32 overflow-hidden">
             <div className="container mx-auto px-6">
 
                 {/* Section Heading */}

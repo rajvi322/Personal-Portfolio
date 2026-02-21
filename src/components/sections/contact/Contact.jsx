@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../ui/Button";
 import data from "./data.json";
 
 export const Contact = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="relative py-20 bg-blush overflow-hidden">
 
@@ -34,6 +37,7 @@ export const Contact = () => {
                         <Button
                             varient="primary"
                             className="mt-8 px-8 py-3 mx-auto"
+                            onClick={() => navigate("/contact")}
                         >
                             {data.buttonText}
                         </Button>

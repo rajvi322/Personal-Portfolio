@@ -15,24 +15,41 @@ const Layout = ({ children }) => {
         mass: 0.3,
     });
 
-    // Measure total content height
+    // Reset scroll on children (page) change
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [children]);
+
+    // Measure total content height using ResizeObserver
     useEffect(() => {
         const calculateHeight = () => {
             if (scrollRef.current) {
-                setHeight(scrollRef.current.getBoundingClientRect().height);
+                setHeight(scrollRef.current.scrollHeight);
             }
         };
 
+        const resizeObserver = new ResizeObserver(() => {
+            calculateHeight();
+        });
+
+        if (scrollRef.current) {
+            resizeObserver.observe(scrollRef.current);
+        }
+
+        // Also recalculate on initial mount and window resize
         calculateHeight();
         window.addEventListener("resize", calculateHeight);
-        return () => window.removeEventListener("resize", calculateHeight);
+
+        return () => {
+            resizeObserver.disconnect();
+            window.removeEventListener("resize", calculateHeight);
+        };
     }, []);
 
-    // Translate content smoothly
+    // Translate content smoothly - only if height > window height
     const y = useTransform(
         smoothProgress,
-        [0, 1],
-        [0, -(height - window.innerHeight)]
+        (value) => value * -(Math.max(0, height - window.innerHeight))
     );
 
     return (
@@ -53,16 +70,16 @@ const Layout = ({ children }) => {
             />
 
             {/* Spacer to allow native scroll */}
-            <div style={{ height }} />
+            <div style={{ height: Math.max(height, window.innerHeight) }} />
 
             {/* Smooth scroll container */}
             <motion.div
                 ref={scrollRef}
                 style={{ y }}
-                className="fixed top-0 left-0 right-0"
+                className="fixed top-0 left-0 right-0 flex flex-col min-h-screen"
             >
                 <Header />
-                <main>{children}</main>
+                <main className="flex-grow flex flex-col">{children}</main>
                 <Footer />
             </motion.div>
         </>
