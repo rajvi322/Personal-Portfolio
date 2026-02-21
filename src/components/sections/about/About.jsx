@@ -7,8 +7,16 @@ export const About = () => {
         <div className="">
             <div className="container mx-auto px-22 py-28">
                 <div className="flex flex-col md:flex-row items-center justify-between">
-                    <div>
-                        <img src="/temp1.jpg" alt="" className="w-72 md:w-[420px] drop-shadow-xl" />
+                    <div className="relative w-72 md:w-[420px] group">
+                        {/* Background Accent */}
+                        <div className="absolute -bottom-6 -right-6 w-full h-full rounded-3xl bg-blush-dark/20 transition-all duration-500 group-hover:-translate-y-2 group-hover:-translate-x-2"></div>
+
+                        {/* Image */}
+                        <img
+                            src="/my_img.jpeg"
+                            alt="Rajvi"
+                            className="relative z-10 rounded-3xl shadow-2xl object-cover transition duration-500 group-hover:-translate-y-2 group-hover:-translate-x-2"
+                        />
                     </div>
                     <div className="relative max-w-xl z-10 text-center md:text-left">
 
