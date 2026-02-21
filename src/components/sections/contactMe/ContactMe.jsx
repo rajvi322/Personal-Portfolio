@@ -30,19 +30,18 @@ export const ContactMe = () => {
 
                     {/* Email */}
                     <div className="flex items-center gap-3 mb-3">
-                        <Mail className="text-brown-dark" size={18} />
+                        <Mail className="text-caramel" size={18} />
                         <a
                             href={`mailto:${data.email}`}
-                            className="text-brown-dark font-medium hover:underline"
+                            className="text-brown-dark text-base tracking-wide font-semibold hover:text-blush-dark transition duration-300"
                         >
                             {data.email}
                         </a>
                     </div>
 
-                    {/* Phone */}
                     <div className="flex items-center gap-3 mb-6">
-                        <Phone className="text-brown-dark" size={18} />
-                        <span className="text-brown-dark">
+                        <Phone className="text-caramel" size={18} />
+                        <span className="text-brown-dark text-base tracking-wide font-semibold">
                             {data.phone}
                         </span>
                     </div>
